@@ -1,0 +1,327 @@
+:root {
+  --main-color: #06b6d4;
+  --most-font-family: "Roboto", sans-serif;
+  --back-gray: #cbd5e1;
+  --main-content-text: #64748b;
+}
+
+body {
+  margin: 0;
+  font-family: var(--most-font-family);
+}
+
+img {
+  cursor: pointer;
+}
+
+/* Main container that holds all the 3 main containers */
+.container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 1.2fr 5fr;
+  grid-template-rows: 1fr 6fr;
+}
+
+/* asside container to setup user settings */
+.sidebar {
+  background-color: var(--main-color);
+  display: grid;
+  align-items: start;
+  justify-content: center;
+  gap: 7%;
+  padding-top: 5%;
+  grid-row: 1/3;
+  color: white;
+}
+
+.functionality > .logo {
+  font-size: x-large;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.functionality > .logo > img {
+  height: 3vw;
+  width: auto;
+}
+
+.functionality {
+  font-size: 1em;
+  font-weight: 500;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  align-items: baseline;
+  justify-content: center;
+  gap: 3%;
+}
+
+.functionality > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5%;
+  cursor: pointer;
+}
+
+.functionality > div > img {
+  height: 2vw;
+  width: auto;
+}
+
+/* main navigator that situated on the right top */
+.header {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  box-shadow: 5px 5px 5px var(--main-content-text);
+}
+
+.search-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+  padding: 1% 5%;
+}
+
+.median-icon {
+  cursor: pointer;
+  width: 2vw;
+  height: auto;
+}
+
+.search-bar > input {
+  color: black;
+  padding: 1% 2%;
+  flex: 1 1 0;
+  border: none;
+  border-radius: 1em;
+  background-color: var(--back-gray);
+}
+
+.bigger-icon {
+  width: 8%;
+  height: auto;
+}
+
+.search-bar > input:focus {
+  border-color: var(--main-color);
+}
+
+.profile {
+  display: flex;
+  font-size: 1em;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+.view {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  padding: 1% 5%;
+}
+
+.view > img {
+  width: 10%;
+  height: auto;
+}
+
+.view > div {
+  flex: 1 1 0;
+  display: flex;
+  line-height: 1.5em;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+}
+
+.view-font {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  padding: 0 10%;
+}
+
+.button-container > button {
+  flex: 1 1 0;
+  background-color: var(--main-color);
+  border: none;
+  align-items: center;
+  padding: 3% 1%;
+  border-radius: 1em;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  font-size: 1em;
+  text-transform: capitalize;
+}
+
+.button-container > button:active {
+  border: 3px solid var(--main-color);
+}
+
+/* as the name suggests the container, that holds main content */
+.main-content {
+  overflow: auto;
+  background-color: var(--back-gray);
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2%;
+  justify-content: flex-start;
+  padding: 2% 1%;
+  color: var(--main-content-text);
+}
+
+.projects {
+  flex: 3 3 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, 1fr);
+  gap: 0% 2%;
+}
+
+.project-container > div {
+  /* border: 3px solid black; */
+  display: flex;
+  padding: 10%;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  border-left: 10px solid #fbbf24;
+}
+
+.pr-title {
+  line-height: 1.3em;
+  padding-bottom: 1%;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #000;
+  display: block;
+}
+
+.process {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10%;
+  padding-top: 5%;
+}
+.process > img {
+  width: 10%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Asside part */
+.main-asside {
+  flex: 1 1 0;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.main-asside > div {
+  flex: 1 1 0;
+}
+
+.main-font {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: black;
+}
+
+.white-container {
+  margin-top: 5%;
+  border-radius: 0.5em;
+  background-color: white;
+  box-shadow: 1px 1px 3px var(--main-content-text);
+}
+
+.announcements {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+  font-size: 0.8em;
+  margin-bottom: 10%;
+}
+
+.announcements hr {
+  width: 100%;
+  border: 0.5px solid var(--back-gray);
+  margin: 7% 0;
+}
+
+.sect-bold + div {
+  margin-top: 2%;
+}
+
+.sect-bold {
+  font-size: 1em;
+  color: black;
+  font-weight: bold;
+}
+
+/* Trending */
+.trending {
+  position: relative;
+  height: 40vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  padding: 5% 10%;
+  gap: 7%;
+  height: min(1fr, 30vh);
+}
+
+.trending > div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 8%;
+}
+
+.trending img {
+  width: 100%;
+  height: auto;
+}
+
+.trending img + div {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 10%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tag {
+  color: black;
+}
+
+@media (max-width: 700px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+}
